@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,7 @@ using UnityEngine;
 
 
 
+
         public Ingredients(string _name, int _id, GameObject _prefab, int _dollarValue)
         {
                 name = _name;
@@ -20,5 +22,17 @@ using UnityEngine;
                 prefab = _prefab;
                 dollarValue = _dollarValue;
         }
+
+
+
+
+
+
+
+
+
     }
+
+
+
 

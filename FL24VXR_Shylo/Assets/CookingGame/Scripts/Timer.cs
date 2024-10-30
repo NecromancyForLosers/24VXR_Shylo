@@ -7,7 +7,7 @@ public class Timer : MonoBehaviour
 {
     [SerializeField] float timerValue = 30;
     [SerializeField] TextMeshProUGUI timerText;
-    
+    public static bool isTimerActive = true;
 
 
     // Start is called before the first frame update
@@ -25,7 +25,8 @@ public class Timer : MonoBehaviour
             yield return null;
         }
 
-        timerText.text = "Time = 0";
+        timerText.text = "Time:0";
+        isTimerActive = false;
     }
 
 }
