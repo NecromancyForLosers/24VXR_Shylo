@@ -10,6 +10,7 @@ public class Recipe
     public GameObject prefab;
     Transform moveLoc;
     public List<int> ingredientsID;
+    public static int maxNumber = 3;
   
 
    

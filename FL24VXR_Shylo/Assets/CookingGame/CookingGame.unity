@@ -444,7 +444,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706abbd7c25a62847bd34c4e3a6b7365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 0}
   spawnLocation: {fileID: 0}
 --- !u!1 &804620951 stripped
 GameObject:
@@ -464,7 +463,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706abbd7c25a62847bd34c4e3a6b7365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 0}
   spawnLocation: {fileID: 0}
 --- !u!1 &848858484
 GameObject:
@@ -591,7 +589,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0234432e777755d41ba232518c46175d,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1125790684}
+      addedObject: {fileID: 1125790688}
   m_SourcePrefab: {fileID: 100100000, guid: 0234432e777755d41ba232518c46175d, type: 3}
 --- !u!1 &991189411 stripped
 GameObject:
@@ -611,7 +609,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706abbd7c25a62847bd34c4e3a6b7365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 0}
   spawnLocation: {fileID: 0}
 --- !u!1 &1055609298
 GameObject:
@@ -623,7 +620,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1055609299}
   - component: {fileID: 1055609300}
-  - component: {fileID: 1055609301}
   m_Layer: 0
   m_Name: RecipeManager
   m_TagString: Untagged
@@ -660,20 +656,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerValue: 30
   timerText: {fileID: 1205637251}
---- !u!114 &1055609301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1055609298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b417b6519fafcd24786a33e148cb2092, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  numberOfPrefabsToSpawn: 1
-  Prefabs: []
 --- !u!1 &1125790678 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0234432e777755d41ba232518c46175d,
@@ -702,7 +684,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2534964839176971238, guid: 0234432e777755d41ba232518c46175d, type: 3}
---- !u!114 &1125790684
+--- !u!114 &1125790688
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -714,8 +696,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b417b6519fafcd24786a33e148cb2092, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfPrefabsToSpawn: 1
-  Prefabs: []
+  prefab: []
+  numberOfPrefabsToSpawn: 0
 --- !u!1 &1148149240 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4352723121176683719, guid: 2ba0077f56bc420428b4ed8dcdd057de,
@@ -734,7 +716,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706abbd7c25a62847bd34c4e3a6b7365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 0}
   spawnLocation: {fileID: 0}
 --- !u!1 &1205637249
 GameObject:
@@ -1234,13 +1215,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b417b6519fafcd24786a33e148cb2092, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfPrefabsToSpawn: 1
-  Prefabs:
-  - {fileID: 804620951}
-  - {fileID: 773987097}
-  - {fileID: 991189411}
-  - {fileID: 2049666239}
+  prefab:
   - {fileID: 1148149240}
+  - {fileID: 2049666239}
+  - {fileID: 991189411}
+  - {fileID: 773987097}
+  - {fileID: 804620951}
+  numberOfPrefabsToSpawn: 1
 --- !u!1 &1707249499
 GameObject:
   m_ObjectHideFlags: 0
@@ -1285,13 +1266,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b417b6519fafcd24786a33e148cb2092, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfPrefabsToSpawn: 1
-  Prefabs:
-  - {fileID: 804620951}
-  - {fileID: 773987097}
-  - {fileID: 991189411}
-  - {fileID: 2049666239}
+  prefab:
   - {fileID: 1148149240}
+  - {fileID: 2049666239}
+  - {fileID: 991189411}
+  - {fileID: 773987097}
+  - {fileID: 804620951}
+  numberOfPrefabsToSpawn: 1
 --- !u!1 &1746458816
 GameObject:
   m_ObjectHideFlags: 0
@@ -1336,13 +1317,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b417b6519fafcd24786a33e148cb2092, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfPrefabsToSpawn: 1
-  Prefabs:
-  - {fileID: 804620951}
-  - {fileID: 773987097}
-  - {fileID: 991189411}
-  - {fileID: 2049666239}
+  prefab:
   - {fileID: 1148149240}
+  - {fileID: 2049666239}
+  - {fileID: 991189411}
+  - {fileID: 773987097}
+  - {fileID: 804620951}
+  numberOfPrefabsToSpawn: 1
 --- !u!1 &1970249404
 GameObject:
   m_ObjectHideFlags: 0
@@ -1495,7 +1476,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706abbd7c25a62847bd34c4e3a6b7365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 0}
   spawnLocation: {fileID: 0}
 --- !u!1001 &500367404862465219
 PrefabInstance:
@@ -1861,15 +1841,15 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1707249500}
+  - {fileID: 1746458817}
+  - {fileID: 1534461395}
   - {fileID: 1055609299}
   - {fileID: 204311860}
   - {fileID: 1326581094}
   - {fileID: 139874852}
   - {fileID: 1325375444}
   - {fileID: 890468889}
-  - {fileID: 1534461395}
-  - {fileID: 1746458817}
-  - {fileID: 1707249500}
   - {fileID: 3913919990628258052}
   - {fileID: 3719024647853823796}
   - {fileID: 8621941353893596297}
