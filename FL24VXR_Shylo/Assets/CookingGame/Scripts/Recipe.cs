@@ -11,20 +11,6 @@ public class Recipe
     Transform moveLoc;
     public List<int> ingredientsID;
     public static int maxNumber = 3;
-  
-
-   
-
-   
-     
-   // private void Update()
-    // {
-    //   if (GameObject.Find("RecLoc1") == null)
-    //   {
-    //      SpawnRandomPrefabs();
-    // }
-    // }
-
 
 
     public Recipe(string _recipe, int _recipeID, List<int> _ingredientsID )
