@@ -1456,7 +1456,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectPoint: {fileID: 512796882}
   pullSpeed: 5
-  Grabbable: {fileID: 915859239}
+  DemoCat: {fileID: 0}
+  Animator: {fileID: 0}
 --- !u!1 &524603705
 GameObject:
   m_ObjectHideFlags: 0
@@ -1748,7 +1749,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 15.99, y: 1.4017822, z: 0}
-  m_LocalScale: {x: 3.2360501, y: 5, z: 5}
+  m_LocalScale: {x: 6.974012, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -4005,7 +4006,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1482015864}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ffc3472e5115d447988e0d67d92708f, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ce4e3f75bfa3ec4782df1b90848f838, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Button: {fileID: 73845043}
@@ -4027,6 +4028,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  Coffee: {fileID: 915859232}
 --- !u!54 &1482015868
 Rigidbody:
   m_ObjectHideFlags: 0

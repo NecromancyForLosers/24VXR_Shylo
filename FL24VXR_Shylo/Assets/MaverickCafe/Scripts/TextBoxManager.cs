@@ -13,7 +13,7 @@ public class TextBoxManager : MonoBehaviour
 
     public GameObject textBox;
 
-    //public Text thetext;
+    public GameObject TextCanvas;
 
 
     public TextAsset DemoText;
@@ -21,6 +21,11 @@ public class TextBoxManager : MonoBehaviour
 
     public int currentLine;
     public int endALine;
+
+    private bool hasShown = false;
+
+    public Animator animator;       // Reference to the Animator
+    public string animationName;
 
 
     // Start is called before the first frame update
@@ -42,6 +47,19 @@ public class TextBoxManager : MonoBehaviour
     {
         theText.text = textlines[currentLine];
 
+       
+            if (!hasShown)
+            {
+                AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+
+                // Check if the animation is finished
+                if (stateInfo.IsName(animationName) && stateInfo.normalizedTime >= 1.0f)
+                {
+                    TextCanvas.SetActive(true); // Show the object
+                    hasShown = true;             // Prevent further calls
+                }
+            }
+
     }
 
     public void nextLine()
@@ -50,8 +68,11 @@ public class TextBoxManager : MonoBehaviour
 
         if (currentLine > endALine) 
         {
-            textBox.SetActive(false);
+            TextCanvas.SetActive(false);
         }
     }
+
+
+
 
 }

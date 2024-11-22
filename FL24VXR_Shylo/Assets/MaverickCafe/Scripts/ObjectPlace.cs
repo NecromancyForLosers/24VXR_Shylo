@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
@@ -9,8 +10,10 @@ public class ObjectPlace : MonoBehaviour
     public float pullSpeed = 5f; // Speed at which the object moves to the collection point
 
     private GameObject CoffeeCup; // Tracks the object currently held by this collector
+    public GameObject DemoCat;
+    public Animator Animator;
 
-    public MonoBehaviour Grabbable;
+    //public MonoBehaviour Grabbable;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -40,6 +43,8 @@ public class ObjectPlace : MonoBehaviour
             rb.isKinematic = true;
         }
 
+        XRGrabInteractable Grabbable = obj.GetComponent<XRGrabInteractable>();
+
         if (Grabbable != null)
         {
             Grabbable.enabled = false;
@@ -58,23 +63,31 @@ public class ObjectPlace : MonoBehaviour
         // Re-parent the object to the collector and mark it as collected
         obj.transform.SetParent(collectPoint);
         CoffeeCup = obj; // Store the collected object
+
+        Destroy(obj);
+        Animator.Play("WalkOut", -1, 0f);
     }
 
-    public void ReleaseObject()
-    {
-        // If there is a collected object, release it
-        if (CoffeeCup != null)
-        {
-            // Re-enable physics on the object
-            Rigidbody rb = CoffeeCup.GetComponent<Rigidbody>();
-            if (rb != null)
-            {
-                rb.isKinematic = false;
-            }
 
-            // Unparent the object
-            CoffeeCup.transform.SetParent(null);
-            CoffeeCup = null; // Clear the reference
-        }
-    }
+
+
+    
+
+    //public void ReleaseObject()
+    //{
+    //    // If there is a collected object, release it
+    //    if (CoffeeCup != null)
+    //    {
+    //        // Re-enable physics on the object
+    //        Rigidbody rb = CoffeeCup.GetComponent<Rigidbody>();
+    //        if (rb != null)
+    //        {
+    //            rb.isKinematic = false;
+    //        }
+
+    //        // Unparent the object
+    //        CoffeeCup.transform.SetParent(null);
+    //        CoffeeCup = null; // Clear the reference
+    //    }
+    //}
 }

@@ -11,6 +11,7 @@ public class ButtonVR : MonoBehaviour
     public UnityEvent onrelease;
     GameObject presser;
     bool isPressed;
+    public GameObject Coffee;
 
     private void Start()
     {
@@ -40,9 +41,10 @@ public class ButtonVR : MonoBehaviour
 
     public void SpawnCoffee()
     {
-        GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-        sphere.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-        sphere.transform.localPosition = new Vector3(12, 2, -14);
-        sphere.AddComponent<Rigidbody>();
+
+        Vector3 spawnPosition = new Vector3(-2.022f, 1.5f, -10.32f);
+        GameObject instance = Instantiate(Coffee, spawnPosition, Quaternion.identity);
+        instance.name = "TempCoffee";
+       
     }
 }
