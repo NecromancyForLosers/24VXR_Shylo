@@ -41,10 +41,10 @@ public class ButtonVR : MonoBehaviour
 
     public void SpawnCoffee()
     {
-
-        Vector3 spawnPosition = new Vector3(-2.022f, 1.5f, -10.32f);
+      
+        Vector3 spawnPosition = new Vector3(-2f, 1.5f, -10.32f);
         GameObject instance = Instantiate(Coffee, spawnPosition, Quaternion.identity);
         instance.name = "TempCoffee";
-       
+   
     }
 }
