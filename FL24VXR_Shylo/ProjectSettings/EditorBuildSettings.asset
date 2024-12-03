@@ -6,8 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/TestScenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/MaverickCafe/MaverickCafeScene.unity
+    guid: e15c75602504058488ecf13631f816c2
+  - enabled: 1
+    path: Assets/MaverickCafe/MaverickCafeStart.unity
+    guid: c2ac135457538114ba04b33244735e63
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 945dff3e924fb794abba45df5b878164,
       type: 2}

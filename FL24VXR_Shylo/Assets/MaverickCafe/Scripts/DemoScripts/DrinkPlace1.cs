@@ -8,7 +8,6 @@ public class DrinkPlace1 : MonoBehaviour
 {
     public Transform collectPoint; // The point where the item will be placed
     public float pullSpeed = 5f; // Speed at which the object moves to the collection point
-
     private GameObject ItemGrabbed; // Tracks the object currently held by this collector
     public Animator Animator;
     public GameObject DemoTextBoxCanvas;
@@ -100,28 +99,4 @@ public class DrinkPlace1 : MonoBehaviour
         DemoTalkBox.SetActive(false);
         
     }
-
-
-
-  
-
-
-
-    //public void ReleaseObject()
-    //{
-    //    // If there is a collected object, release it
-    //    if (CoffeeCup != null)
-    //    {
-    //        // Re-enable physics on the object
-    //        Rigidbody rb = CoffeeCup.GetComponent<Rigidbody>();
-    //        if (rb != null)
-    //        {
-    //            rb.isKinematic = false;
-    //        }
-
-    //        // Unparent the object
-    //        CoffeeCup.transform.SetParent(null);
-    //        CoffeeCup = null; // Clear the reference
-    //    }
-    //}
 }

@@ -39,7 +39,7 @@ public class SparkyTextBox : MonoBehaviour
     private void Update()
     {
         theTextSparky.text = textlinesSparky[SparkycurrentLine];
-        Debug.Log($"DuckycurrentLine: {SparkycurrentLine}, textlinesDucky.Length: {textlinesSparky?.Length}");
+        Debug.Log($"SparkycurrentLine: {SparkycurrentLine}, textlinesSparky.Length: {textlinesSparky?.Length}");
 
         if (!hasShown)
         {

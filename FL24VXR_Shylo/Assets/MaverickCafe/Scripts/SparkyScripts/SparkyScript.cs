@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class SparkyScript : MonoBehaviour
 {
     public GameObject DuckyModel; //Demos model
-    public Animator Animator; //Animator for Ducky
-    public float minDelay = 5f;    // Minimum delay before playing the animation
-    public float maxDelay = 30f;   //Maximum time before playing animation
+    public Animator Animator; //Animator for Sparky
+    public float minDelay = 30f;    // Minimum delay before playing the animation
+    public float maxDelay = 60f;   //Maximum time before playing animation
     bool AnimationPlayed = false;  //animation played bool
     public AudioSource DoorChimes;  //Walk in sound
     public GameObject DrinkSpot3;  //Where the second drink 
