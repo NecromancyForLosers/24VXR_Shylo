@@ -17,8 +17,8 @@ public class PoppyTextBox : MonoBehaviour
     public Animator animator;       // Reference to the Animator
     public Animator WalkAnimator;
     public string animationName;
-    //public AudioSource PoppyTalk;
-    //public AudioSource PoppyTalkShort;
+    public AudioSource PoppyTalk;
+    public AudioSource PoppyTalkShort;
 
 
     // Start is called before the first frame update
@@ -63,7 +63,7 @@ public class PoppyTextBox : MonoBehaviour
         StartConvoBox.SetActive(false);
         TextCanvas.SetActive(true);
         hasShown = true;
-        //PoppyTalk.Play();
+        PoppyTalk.Play();
         animator.Play("PoppyTalk", -1, 0f);
 
     }
@@ -71,12 +71,12 @@ public class PoppyTextBox : MonoBehaviour
     public void nextLine()
     {
         PoppycurrentLine += 1;
-        //PoppyTalk.Play();
-
+            PoppyTalkShort.Play();
+        
         if (PoppycurrentLine > PoppyendALine)
         {
             TextCanvas.SetActive(false);
-            //PoppyTalk.Stop();
+            PoppyTalkShort.Stop();
             animator.Play("Idle", -1, 0f);
         }
     }

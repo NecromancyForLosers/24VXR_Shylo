@@ -12,6 +12,7 @@ public class ButtonVR : MonoBehaviour
     GameObject presser;
     bool isPressed;
     public GameObject Coffee;
+    public AudioSource CoffeeSound;
 
     private void Start()
     {
@@ -36,6 +37,7 @@ public class ButtonVR : MonoBehaviour
             Button.transform.localPosition = new Vector3(0, 0.015f, 0);
             onrelease.Invoke();
             isPressed = false;
+            CoffeeSound.Play();
         }
     }
 

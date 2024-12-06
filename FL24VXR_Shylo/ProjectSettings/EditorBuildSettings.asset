@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MaverickCafe/MaverickCafeStart.unity
     guid: c2ac135457538114ba04b33244735e63
+  - enabled: 1
+    path: Assets/MaverickCafe/DemoEnd.unity
+    guid: 6a149773afa60134aaa7733f5e41afdc
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 945dff3e924fb794abba45df5b878164,
       type: 2}

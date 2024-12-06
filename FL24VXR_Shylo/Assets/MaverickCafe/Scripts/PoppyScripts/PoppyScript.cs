@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,6 +19,8 @@ public class PoppyScript : MonoBehaviour
     public GameObject TimerUI;
     public GameObject StartTalkBox;
     private Coroutine RandomCoroutine;
+    public AudioSource Walking;
+    public AudioSource SitDown;
 
 
 
@@ -51,6 +54,21 @@ public class PoppyScript : MonoBehaviour
     public void DisableDrinkSpot4()
     {
         DrinkSpot4.SetActive(false);
+    }
+
+    public void PlayWalkSounds()
+    {
+        Walking.Play();
+    }
+
+    public void StopWalkSounds()
+    {
+        Walking.Stop();
+    }
+
+    public void PlaySitSound()
+    {
+        SitDown.Play();
     }
 
 

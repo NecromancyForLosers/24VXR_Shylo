@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,6 +20,8 @@ public class DuckyScript : MonoBehaviour
     public GameObject TimerUI;
     public GameObject StartTalkBox;
     private Coroutine RandomCoroutine;
+    public AudioSource Walking;
+    public AudioSource SitDown;
 
 
 
@@ -54,6 +57,21 @@ public class DuckyScript : MonoBehaviour
         DrinkSpot2.SetActive(false);
     }
 
+
+    public void PlayWalkSounds()
+    {
+        Walking.Play();
+    }
+
+    public void StopWalkSounds()
+    {
+        Walking.Stop();
+    }
+
+    public void PlaySitSound()
+    {
+        SitDown.Play();
+    }
 
     private System.Collections.IEnumerator PlayAnimationAtRandomTime()
     {   

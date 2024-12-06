@@ -14,6 +14,9 @@ public class DemoScript : MonoBehaviour
    public GameObject TimerUI;
    public DrinkPlace1 wrong;
    public GameObject StartTalkBox;
+   public AudioSource Walking;
+   public AudioSource SitDown;
+
 
 
     public void DestroyObject()
@@ -34,7 +37,23 @@ public class DemoScript : MonoBehaviour
    
     }
 
- 
+    public void PlayWalkSounds() 
+    {
+        Walking.Play();
+    }
+
+    public void StopWalkSounds()
+    {
+        Walking.Stop();
+    }
+
+    public void PlaySitSound()
+    {
+        SitDown.Play();
+    }
+
+
+
     void StartTimer() 
     {
         countdownCoroutine = StartCoroutine(StartCountdown());
